@@ -7,6 +7,7 @@ import { LeftPage2Component } from "./components/left-box/left-page2/left-page2.
 import { RightMainPageComponent } from "./components/right-box/right-main-page/right-main-page.component";
 import { RightPage2Component } from "./components/right-box/right-page2/right-page2.component";
 import { LeftBoxRoutingModule } from './components/left-box/left-box-routing.module';
+import { RightBoxRoutingModule } from './components/right-box/right-box-routing.module';
 
 const routes: Routes = [
   { path: "main", component: LeftBoxComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     LeftBoxRoutingModule,
+    RightBoxRoutingModule,
     RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
