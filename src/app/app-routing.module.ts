@@ -10,8 +10,13 @@ import { LeftBoxRoutingModule } from './components/left-box/left-box-routing.mod
 import { RightBoxRoutingModule } from './components/right-box/right-box-routing.module';
 
 const routes: Routes = [
-  { path: "main", component: LeftBoxComponent },
-  { path: "", redirectTo: "main", pathMatch: "full" }
+  {
+    path: "",
+    children: [
+      { path: "", component: LeftMainPageComponent },
+      { path: "", component: RightMainPageComponent, outlet: "righty" }
+    ]
+  }
 ];
 
 @NgModule({
